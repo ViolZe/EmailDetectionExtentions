@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Gmail Ethical Content Detector</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="popupContainer">
+    <h2>Gmail Ethical Detector</h2>
+
+    <div class="section toggles">
+      <div class="toggle-row">
+        <span>Realtime Scanning</span>
+        <button id="realtimeToggle" class="toggle-button">Toggle</button>
+      </div>
+      <div class="toggle-row">
+        <span>Phishing Detection</span>
+        <button id="phishingToggle" class="toggle-button">Toggle</button>
+      </div>
+      <div class="toggle-row">
+        <span>Spam Detection</span>
+        <button id="spamToggle" class="toggle-button">Toggle</button>
+      </div>
+      <div class="toggle-row">
+        <span>Bias Detection</span>
+        <button id="biasToggle" class="toggle-button">Toggle</button>
+      </div>
+      <div class="toggle-row">
+        <span>Hate Speech Detection</span>
+        <button id="hateSpeechToggle" class="toggle-button">Toggle</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <label for="sensitivitySlider">Sensitivity Level</label>
+      <input type="range" id="sensitivitySlider" min="1" max="5" />
+    </div>
+
+    <div class="section">
+      <div id="statusIndicator" class="status-indicator">Status</div>
+    </div>
+
+    <div class="section">
+      <button id="scanButton">Scan Current Email</button>
+      <button id="settingsButton">Settings</button>
+      <button id="clearDataButton">Clear Data</button>
+    </div>
+
+    <div class="section stats">
+      <h3>Stats</h3>
+      <p>Emails Scanned: <span id="emailsScanned">0</span></p>
+      <p>Threats Blocked: <span id="threatsBlocked">0</span></p>
+      <p>Bias Detected: <span id="biasDetected">0</span></p>
+    </div>
+
+    <div id="loadingSection" class="loading-section">Scanning...</div>
+
+    <div id="resultsSection" class="section" style="display:none;">
+      <h3>Results</h3>
+      <div id="resultsList"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
